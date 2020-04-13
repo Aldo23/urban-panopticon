@@ -53,3 +53,4 @@ urllib3==1.25.8
 wcwidth==0.1.9
 webencodings==0.5.1
 zipp==3.1.0
+matplotlib==3.2.1
