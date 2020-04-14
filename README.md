@@ -10,7 +10,7 @@
   - open a Terminal (mac) or PowerShell (win)
   - change directory to your desired path `example: cd /Users/xxx/Desktop/`
   - `git clone https://github.com/Aldo23/urban-panopticon.git`
-2.**[virtual environment](https://docs.python.org/3/tutorial/venv.html)**
+2. **[virtual environment](https://docs.python.org/3/tutorial/venv.html)**
   - `cd urban-panopticon`
   - `python3 -m venv env`
   -  mac: `source /env/bin/activate`
