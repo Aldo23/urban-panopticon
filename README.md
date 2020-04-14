@@ -19,5 +19,6 @@
   - `pip install -r requirements.txt`
 
 ## Usage
-- Activate your virtual environment in the Terminal/PowerShell (as explained above)
+- Change directory in the Terminal/PowerShell to repository folder
+- Activate your virtual environment (as explained above)
 - type `jupyter notebook`
