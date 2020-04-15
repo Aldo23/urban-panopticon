@@ -1,7 +1,7 @@
 # Urban Panopticon - MACT 2020
 
 ## Requirements
-- [Python 3 (ideally 3.6 or 3.7)](https://www.python.org/downloads/)
+- [Python 3](https://www.python.org/downloads/)(ideally 3.6 or 3.7)
 - [git](https://www.atlassian.com/git/tutorials/install-git)
 
 
