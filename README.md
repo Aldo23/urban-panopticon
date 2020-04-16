@@ -24,7 +24,7 @@
 - Activate your virtual environment (as explained above)
 - type `jupyter notebook`
 
-## Bugs
+## Troubleshooting
 - if `.\env\Scripts\activate` fails to run in Windows
   - make sure you run Powershell as Administrator 
   - `Set-ExecutionPolicy RemoteSigned`
