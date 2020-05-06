@@ -20,7 +20,7 @@ output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 # Loading image
-img_org = cv2.imread('./media/img_marked.jpg')
+img_org = cv2.imread('./playground/media/img_marked.jpg')
 img_org = imutils.resize(img_org, width=500)
 
 img = copy.deepcopy(img_org)

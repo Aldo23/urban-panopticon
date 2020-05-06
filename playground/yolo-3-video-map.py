@@ -46,7 +46,7 @@ Reading input video
 # r'videos\traffic-cars.mp4'
 # or:
 # 'videos\\traffic-cars.mp4'
-video = cv2.VideoCapture('./media/video_test_long.mp4')
+video = cv2.VideoCapture('./playground/media/video_test_long.mp4')
 
 # Import .csv of location coordinates in EPSG 3857
 corners_geo = pd.read_csv('./data/corners_3857.csv')
@@ -62,7 +62,7 @@ h, w = None, None
 End of:
 Reading input video
 """
-img_org = cv2.imread('./media/video_corners.jpg')
+img_org = cv2.imread('./playground/media/video_corners.jpg')
 markers = transf.find_markers(img_org)
 corners, img_org = transf.sort_markers(markers, img_org)
 
@@ -166,7 +166,7 @@ while True:
     if not ret:
         break
     
-    if iteration % 5 == 0:
+    if iteration % 200 == 0:
 
         # Getting spatial dimensions of the frame
         # we do it only once from the very beginning
@@ -344,15 +344,16 @@ Mapping
 print('\n Converting to EPSG 4326')
 
 df_4326 = mapping.convertCRS(df, 3857, 4326)
-df_4326.to_csv('data_4326.csv', index = False)
+#df_4326.to_csv('data_4326.csv', index = False)
 
 print('\n Data exported')
 
 # Create basemap
 m = mapping.createBaseMap(df_4326)
+gradient = folium.branca.colormap.linear.OrRd_04
 
 # Create dot map
-mapping.createDotMapSimple(df_4326, m, 'orange')
+mapping.createDotMapFrame(df_4326, m, gradient)
 
 # Export map to HTML
 folium.Map.save(m,'map.html')
