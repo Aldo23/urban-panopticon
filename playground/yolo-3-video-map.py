@@ -353,7 +353,7 @@ m = mapping.createBaseMap(df_4326)
 gradient = folium.branca.colormap.linear.OrRd_04
 
 # Create dot map
-mapping.createDotMap(df_4326, m, gradient)
+mapping.createDotMapSimple(df_4326, m, gradient)
 
 # Export map to HTML
 folium.Map.save(m,'map.html')
