@@ -13,7 +13,7 @@ def adjustDataFrame(src_df, points, coco_class, frame):
 
     points_df = pd.DataFrame(points, columns=list('XY'), index=ind_range)
     class_df = pd.DataFrame(coco_class, columns=list('t'), index=ind_range)
-    f_df = pd.DataFrame(frame*len(points), dtype=np.int16, columns=list('f'), index=ind_range)
+    f_df = pd.DataFrame(frame, dtype=np.int16, columns=list('f'), index=ind_range)
 
     # Merge dataframes
     out_df = pd.concat([points_df, class_df, f_df], axis=1, sort=False)
