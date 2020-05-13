@@ -313,7 +313,7 @@ while True:
         pointsOut = pointsOut.tolist()[0]
         
         # Create dataframe for frame and append it
-        i_df = mapping.adjustDataFrame(df, pointsOut, class_type, f)
+        i_df = mapping.adjustDataFrame(df, pointsOut, class_type, iteration)
         df = df.append(i_df)
 
         """
