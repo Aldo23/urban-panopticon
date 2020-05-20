@@ -93,3 +93,16 @@ def createDotMapFrame(df, m, gradient):
 
     # Add control to the map
     folium.LayerControl().add_to(m)
+    
+    
+def createHeatMap(df, m):
+
+    # Create list of data for heatmap
+    # the heatmap function accepts lists [[lat, lon],[lat, lon],[lat, lon],[lat, lon],[lat, lon],...]
+    heat_data = [[row['lat'],row['lng']] for index, row in df.iterrows()]
+
+    # Compute Heatmap
+    HeatMap(heat_data,
+       radius=5,
+       max_val=2,
+       ).add_to(m)
